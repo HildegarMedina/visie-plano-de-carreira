@@ -1,0 +1,193 @@
+/*
+Los selectores define a que elemento se le aplicaran ciertas reglas
+
+Podemos usar como selector, la etiqueta HTML, el valor del atributo id o el valor
+del atributo clase
+
+*/
+
+/* 
+    Uno de los selectors más comunes es el selector de clase, solo se toma el valor de el atributo
+    clase de un elemento <div class="miclase">Hola</div>
+*/
+.miclase {
+    /*CSS tiene un conjunto de palabras claves para definir algunos colores, como por ejemplo
+    white, black, aliceblue, blue y más, pero su lista no es extensa, por eso nos permite 
+    definir nuestros colores usando sistemas de color RGB, HSL o HEXADECIMAL
+
+    Los siguientes colores son blanco, pero definidos con sistemas diferentes
+    */
+    color: white;
+    color: #ffffff;
+    color: rgb(255, 255, 255);
+    color: hsl(0, 0%, 100%);
+}
+
+/* 
+    Otro selector es el selector de id, solo se toma el valor de el atributo
+    id de un elemento <div id="miId">Hola</div>
+*/
+#miId {
+    /*
+        La propiedad background de CSS permite colocar efectos de fondo a un elemento.
+        Sus propiedades a su vez son:
+
+        background-color: Agrega un color de fondo
+        background-image: Agrega una imagen de fondo
+        background-repeat: Por defecto, la propiedad background-image repite una imagen 
+        tanto horizontal como verticalmente. Podemos cambiar su comportamiento. repeat|repeat-x|repeat-y|no-repeat|initial|inherit;
+        background-attachment: Permite definir si una imagen de fondo se desplazara o sera fijada. scroll|fixed|local|initial|inherit;
+        background-position: Permite fijar la posicion de la imagen en el fondo del elemento 
+        background (shorthand property): Para acortar el código, también es posible especificar 
+        todas las propiedades de fondo en una sola propiedad.
+        background: color url_image repeat attachmen position
+    */
+    background-color: white;
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background: white url("img_tree.png") no-repeat fixed center;
+}
+
+/* Tambien puedes seleccionar un elemento por su etiqueta*/
+header {
+    /*
+        font-family: Permite definir la familia tipografica de un elemento y sus sub elemento
+        sintax: font-family: buscaprimero, sinobuscasegundo, sinobuscatercero;
+        font-style: La propiedad de estilo de fuente se usa principalmente para especificar 
+        texto en cursiva. italic | normal | oblique
+        font-weight: Permite definir el peso de la fuente. pode usar numero 100, 200, 300, 400, 500, 600,
+        700, 800, 900 ou bold, lighter, normal, etc...
+        font-variant: especifica si un texto debe mostrarse o no en letra minúscula. normal | small-caps
+        font-size: Define el tamanho del texto de la fuente, puede ser representados en px, em, rem, etc...
+        font (shorthand): font-style font-variant font-weight font-size/line-height font-family
+    */
+    font-family: Tahoma, Verdana, sans-serif;
+    font-style: italic; 
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 16px;
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+/*
+    CSS units: 
+
+    Absolutes:
+        cm	centimeters
+        mm	millimeters
+        in	inches (1in = 96px = 2.54cm)
+        px *	pixels (1px = 1/96th of 1in)
+        pt	points (1pt = 1/72 of 1in)
+        pc 	picas (1pc = 12 pt)
+
+    Relatives:
+        em	Relativo al tamaño de fuente del elemento (2em significa 2 veces el tamaño de la fuente actual)
+        ex	En relación con la altura x de la fuente actual (rara vez se usa)	
+        ch	Relative to the width of the "0" (zero)	
+        rem	Relativo al tamaño de fuente del elemento raíz
+        vw	Relativo al 1% del ancho de la ventana gráfica *	
+        vh	Relativo al 1% de la altura de la ventana gráfica
+        vmin	Relativo al 1% de la dimensión más pequeña de la ventana gráfica(masculino)
+        vmax	Relativo al 1% de la dimensión más grande de la ventana gráfica
+        %	Relativo al elemento padre
+*/
+
+/*
+    La propiedad Display es la propiedad CSS más importante para controlar el diseño.
+
+    Cada elemento HTML tiene un valor de visualización predeterminado según el tipo de elemento 
+    que sea. El valor de visualización predeterminado para la mayoría de los elementos es 
+    block (bloque) o inline (en línea)
+
+    Ejemplos de block elements:
+
+    <div>
+    <h1> - <h6>
+    <p>
+    <form>
+    <header>
+    <footer>
+    <section>
+
+    Ejemplo de inline elements:
+
+    <span>
+    <a>
+    <img>
+
+    Todas as propiedades validas para display:
+
+    inline: Muestra un elemento como un elemento en línea (como <span>). 
+    Cualquier propiedad de alto y ancho no tendrá efecto
+    
+    block:Muestra un elemento como un elemento de bloque (como <p>). 
+    Comienza en una nueva línea y ocupa todo el ancho.
+
+    contents: Hace que el contenedor desaparezca, haciendo que los elementos secundarios 
+    sean secundarios del elemento al siguiente nivel en el DOM.
+
+    flex: Muestra un elemento como un contenedor flexible a nivel de bloque.
+
+    grid: Muestra un elemento como un contenedor de cuadrícula a nivel de bloque.
+
+    inline-block: Muestra un elemento como un contenedor de bloques de nivel en línea. 
+    El elemento en sí está formateado como un elemento en línea, pero puede aplicar valores 
+    de alto y ancho
+
+    inline-flex: Muestra un elemento como un contenedor flexible de nivel en línea
+
+    inline-grid: Muestra un elemento como un contenedor de cuadrícula de nivel en línea	
+
+    inline-table: El elemento se muestra como una tabla de nivel en línea
+
+    list-item: Deje que el elemento se comporte como un elemento <li>
+
+    run-in: Muestra un elemento como bloque o en línea, según el contexto
+
+    table: Deje que el elemento se comporte como un elemento <table>
+
+    table-caption: Deje que el elemento se comporte como un elemento <caption>	
+
+    table-column-group: Deje que el elemento se comporte como un elemento <colgroup>
+
+    table-header-group:	Deje que el elemento se comporte como un elemento <thead>	
+    
+    table-footer-group: Deje que el elemento se comporte como un elemento <tfoot>
+
+    table-row-group: Deje que el elemento se comporte como un elemento <tbody>
+
+    table-cell: Deje que el elemento se comporte como un elemento <td>
+
+    table-column: Deje que el elemento se comporte como un elemento <col>
+
+    table-row: Deje que el elemento se comporte como un elemento <tr>	
+
+    none: El elemento se elimina por completo.	
+
+    initial: Establece esta propiedad en su valor predeterminado.
+
+    inherit: Hereda esta propiedad de su elemento padre.
+
+*/
+div.clase {
+    display: none;
+}
+
+/*
+    Con la propiedad CSS border-radius, puede dar a cualquier elemento "esquinas redondeadas".]
+
+    border-radius Una propiedad abreviada para configurar las cuatro propiedades border-*-*-radius
+    border-top-left-radius: Define la forma del borde de la esquina superior izquierda
+    border-top-right-radius: Define la forma del borde de la esquina superior derecha
+    border-bottom-right-radius: Define la forma del borde de la esquina inferior derecha
+    border-bottom-left-radius: Define la forma del borde de la esquina inferior izquierda
+*/
+div.border {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 30px;
+    border-radius: 2px 7px 18px 30px;
+}
