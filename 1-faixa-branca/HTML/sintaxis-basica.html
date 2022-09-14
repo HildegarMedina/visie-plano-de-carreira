@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sintaxis Básica</title>
+</head>
+<body>
+    <!--
+        HTML utiliza etiquetas el cual determina la manera en que los elementos pueden aparecer, 
+        de esta manera podemos colocar texto o imagenes.
+
+        Una etiqueta se identifica facilmente por que se encuentra entre < y >, en HTML una 
+        etiqueta puede verse de dos formas, apertura: <etiqueta> cierre: </etiqueta>
+
+        Las etiquetas pueden tener un atributo y un valor. 
+
+        Un atributo corresponde a un modificador, y puede permitir agregar informacion adicional
+        al elemento, ya sea para el buen funcionamiento de una etiqueta, como para alterar su estado.
+
+        El valor es el contenido dentro del atributo. 
+
+        La estructura del HTML se puede asemejar al cuerpo humano.
+        <html>
+            <head>
+            </head>
+            <body>
+                <a href='htts://google.com'>Google</a>
+            </body>
+        </html>
+    -->
+
+    <header>
+        El header especifica el encabezado del documento o de una sección.
+    </header>
+
+    <!-- El nav define un grupo de enlaces de navegación. -->
+    <nav>
+        <ul>
+            <li><a href="#">Enlace 1</a></li>
+            <li><a href="#">Enlace 2</a></li>
+            <li><a href="#">Enlace 3</a></li>
+        </ul>
+    </nav>
+
+    <p>Esta etiqueta define un parrafo.</p>
+
+    <!-- 
+        Elementos semánticos: esto quiere decir que son elemento que tienen un significado.
+
+        Un elemento semántico describe claramente lo que significa tanto para el navegador como
+        para el desarrollador.
+
+        Ejemplo de elementos no semánticos: div span
+        Ejemplo de elementos semántico: form table article
+    -->
+
+    <section>
+        El elemento section define una sección del documento y normalmente lleva
+        un h1 dentro.
+    </section>
+
+    <article>
+        El articulo define el contenido de un articulo, es decir, de por si solo
+        el ya debe tener sentido sin necesidad de leer el resto del sitio. Ejm:
+        post de un foro, articulo de un blog, noticia.
+    </article>
+
+    <!--
+        article dentro de section o section dentro de article:
+
+        Se puede encontrar ambos casos en internet ya que por ejemplo en la seccion de deporte puedes
+        tener un articulo y el a su vez puede tener multiples secciones dentro, por lo tanto es valido.
+    -->
+
+    <aside>
+        El aside define un contenido que esta indirectamente relacionado al
+        contenido principal, y por lo general suele ser una barra lateral.
+    </aside>
+
+    <figure>
+        <!-- El figure permite indicar que se utilizara una imagen -->
+        <img src="#" alt="#" />
+        <figcaption>
+            El figcaption permite representar un subtitulo o leyenda a una imagen
+        </figcaption>
+    </figure>
+
+    <!-- 
+        Headings (1, 2, 3...).
+        Existen 6 headings para aplicar titulo en nuestro sitio, y tienen una jerarquia desde el 1 al 6.
+
+        H1 – Terra (Suele ser el elemento mas visible y destacado de la pagina)
+        H2 – América do Sul
+        H3 – Brasil
+        H4 – Paraná
+        H5 – Curitiba
+        H6 – Alto da Glória
+    -->
+
+    <!-- Un ejemplo de una buena semántica.-->
+    <section>
+        <h1>Apples</h1>
+        <p>Apples are fruit.</p>
+        <section>
+            <h2>Taste</h2>
+            <p>They taste lovely.</p>
+            <section>
+                <h3>Sweet</h3>
+                <p>Red apples are sweeter than green ones.</p>
+            </section>
+        </section>
+        <section>
+            <h2>Color</h2>
+            <p>Apples come in various colors.</p>
+        </section>
+    </section>
+
+    <section>
+        <h1>Apples</h1>
+        <p>Apples are fruit.</p>
+        <section>
+            <h1>Taste</h1>
+            <p>They taste lovely.</p>
+            <section>
+                <h1>Sweet</h1>
+                <p>Red apples are sweeter than green ones.</p>
+            </section>
+        </section>
+        <section>
+            <h1>Color</h1>
+            <p>Apples come in various colors.</p>
+        </section>
+    </section>
+
+    <!--
+        Este ejemplo necesitarías reglas de estilo explícitas para que se represente 
+        bien en los navegadores heredados. Los navegadores heredados sin compatibilidad con 
+        CSS mostrarían todos los encabezados como encabezados de nivel superior.
+    -->
+
+    <ul>
+        <li type="square">Lista no ordenada</li>
+        <li type="square">Lista no ordenada</li>
+    </ul>
+
+    <ol>
+        <li value="20">Lista ordenadas</li>
+        <li>Lista ordenadas</li>
+    </ol>
+
+    <!-- 
+        Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas <dl>, <dt> y <dd>. 
+        dl: Definiton list, significa que dentro de ella va a haber una definicion.
+        dt: Definition term, significa que vamos a definir un termino.
+        dd: Definition description, significa que vamos a definir una descripción
+    -->
+
+    <dl>
+        <dt>Aquí va el término que definiremos</dt>
+        <dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+    </dl>
+    <dl>
+        <dt>Aquí va la segunda definición</dt>
+        <dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+    </dl>
+
+    <footer>
+        El footer define el pie de página de un documento o una sección.
+    </footer>
+
+</body>
+</html>
